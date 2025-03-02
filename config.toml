@@ -1,0 +1,69 @@
+theme = "naysayer"
+
+[keys.normal]
+
+#buffer switch
+"C-l" =  "goto_next_buffer"
+"C-j" = "goto_previous_buffer"
+
+# mode switch 
+"C-x" = "select_mode"
+"esc" = "insert_mode"
+"A-x" = "command_mode"
+
+# movement keys 
+i = "move_visual_line_up"
+k = "move_visual_line_down"
+j = "move_char_left"
+l = "move_char_right"
+
+
+L = "goto_line_end"
+J = "goto_line_start"
+
+"C-y" = "paste_clipboard_after"
+"A-w" = "yank_to_clipboard"
+
+"C-s" = "search"
+[keys.insert]
+
+#buffer switch
+"C-l" =  "goto_next_buffer"
+"C-j" = "goto_previous_buffer"
+
+# mode switch 
+"C-x" = "select_mode"
+"esc" = "normal_mode"
+"A-x" = "command_mode"
+
+
+"C-y" = "paste_clipboard_after"
+
+                                                      
+"A-l" = "goto_line_end"
+"A-j" = "goto_line_start"
+
+
+[keys.select]
+
+#buffer switch
+"C-l" =  "goto_next_buffer"
+"C-j" = "goto_previous_buffer"
+
+# mode switch 
+"esc" = "normal_mode"
+"C-x" = "insert_mode"
+"A-x" = "command_mode"
+
+
+"A-w" = "yank_to_clipboard"
+L = "goto_line_end"
+J = "goto_line_start"
+
+i = "move_visual_line_up"
+k = "move_visual_line_down"
+j = "move_char_left"
+l = "move_char_right"
+
+                                                                          
+    
