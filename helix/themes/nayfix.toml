@@ -1,0 +1,11 @@
+
+inherits= "naysayer"
+
+diagnostic = {fg = "cyan"}
+
+# diagnostic.hint = {fg = "cyan"}
+
+"diagnostic.info" = {fg = "cyan"}
+
+"diagnostic.warning" = {fg = "black" , bg = "#ffa000"}
+"diagnostic.error" = {fg = "black" , bg = "red"}
