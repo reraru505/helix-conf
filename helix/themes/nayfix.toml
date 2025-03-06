@@ -1,11 +1,15 @@
 
 inherits= "naysayer"
 
-diagnostic = {fg = "cyan"}
+"diagnostic" = {fg = "black" , bg = "yellow"}
 
-# diagnostic.hint = {fg = "cyan"}
+"diagnostic.hint" = {fg = "black" , bg = "yellow" }
 
-"diagnostic.info" = {fg = "cyan"}
+"diagnostic.info" = {fg = "black" , bg = "yellow"}
 
-"diagnostic.warning" = {fg = "black" , bg = "#ffa000"}
+"diagnostic.warning" = {fg = "black" , bg = "yellow"}
 "diagnostic.error" = {fg = "black" , bg = "red"}
+
+"ui.cursor" = {fg = "black" , bg = "#ffa000"}
+"ui.cursor.primary" = {fg = "black" , bg = "#ffa000"}
+"ui.cursor.match" = {fg = "black" , bg = "green"}

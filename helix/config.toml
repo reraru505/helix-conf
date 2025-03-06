@@ -3,9 +3,15 @@ theme = "nayfix"
 
 [keys.normal]
 
-#buffer switch
-"C-l" =  "goto_next_buffer"
-"C-j" = "goto_previous_buffer"
+
+#move selection
+"A-i" = ["extend_to_line_bounds" , "delete_selection" ,"move_line_up", "paste_before"]
+"A-k" = ["extend_to_line_bounds" , "delete_selection" , "paste_after"]
+
+
+#move word
+"C-l" = "move_next_word_start"
+"C-j" = "move_prev_word_start"
 
 # mode switch 
 "C-x" = "select_mode"
@@ -22,15 +28,19 @@ l = "move_char_right"
 L = "goto_line_end"
 J = "goto_line_start"
 
+#copy , move  and paste
 "C-y" = "paste_clipboard_after"
 "A-w" = "yank_to_clipboard"
+"C-q" = ["yank_to_clipboard" , "delete_selection"]
+
 
 "C-s" = "search"
 [keys.insert]
-
-#buffer switch
-"C-l" =  "goto_next_buffer"
-"C-j" = "goto_previous_buffer"
+#move word
+"C-l" = "move_char_right"
+"C-j" = "move_char_left"
+"C-i" = "move_visual_line_up"
+"C-k" = "move_visual_line_down"
 
 # mode switch 
 "C-x" = "select_mode"
@@ -38,7 +48,7 @@ J = "goto_line_start"
 "A-x" = "command_mode"
 
 
-"C-y" = "paste_clipboard_after"
+"C-y" = "paste_clipboard_before"
 
                                                       
 "A-l" = "goto_line_end"
@@ -47,21 +57,27 @@ J = "goto_line_start"
 
 [keys.select]
 
-#buffer switch
-"C-l" =  "goto_next_buffer"
-"C-j" = "goto_previous_buffer"
-
 # mode switch 
 "esc" = "normal_mode"
-"C-x" = "insert_mode"
+"C-x" = "normal_mode"
 "A-x" = "command_mode"
+
+#move word
+"C-l" = "extend_next_word_start"
+"C-j" = "extend_prev_word_start"
 
 
 "A-w" = "yank_to_clipboard"
+"C-q" = ["yank_to_clipboard" , "delete_selection"]
+
 L = "goto_line_end"
 J = "goto_line_start"
 
-i = "move_visual_line_up"
-k = "move_visual_line_down"
-j = "move_char_left"
-l = "move_char_right"
+i = "extend_visual_line_up"
+k = "extend_visual_line_down"
+j = "extend_char_left"
+l = "extend_char_right"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "disable"
