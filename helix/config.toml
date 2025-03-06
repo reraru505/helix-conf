@@ -35,6 +35,10 @@ J = "goto_line_start"
 
 
 "C-s" = "search"
+
+"]" = "goto_next_paragraph"
+"[" = "goto_prev_paragraph"
+
 [keys.insert]
 #move word
 "C-l" = "move_char_right"
@@ -81,3 +85,6 @@ l = "extend_char_right"
 [editor.inline-diagnostics]
 cursor-line = "warning"
 other-lines = "disable"
+
+[editor]
+auto-format = false
