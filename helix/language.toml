@@ -1,0 +1,9 @@
+[[language]]
+name = "python"
+scope = "source.python"
+auto-format = false
+language-server = { command = "pylsp" }
+config = {}
+injection-regex = "python"
+file-types = ["py"]
+shebangs = ["python"]

@@ -13,8 +13,9 @@ theme = "nayfix"
 "C-l" = "move_next_word_start"
 "C-j" = "move_prev_word_start"
 
+
 # mode switch 
-"C-x" = "select_mode"
+"C-x" = ["select_mode"]
 "esc" = "insert_mode"
 "A-x" = "command_mode"
 
@@ -29,11 +30,12 @@ L = "goto_line_end"
 J = "goto_line_start"
 
 #copy , move  and paste
-"C-y" = "paste_clipboard_after"
-"A-w" = "yank_to_clipboard"
-"C-q" = ["yank_to_clipboard" , "delete_selection"]
+"C-y" = "paste_clipboard_before"
+"A-w" = ":clipboard-yank"
+"C-w" = ["yank_to_clipboard" , "delete_selection"]
 
-
+"tab" = ":fmt"
+"ret" = "open_below"
 "C-s" = "search"
 
 "]" = "goto_next_paragraph"
@@ -71,8 +73,10 @@ J = "goto_line_start"
 "C-j" = "extend_prev_word_start"
 
 
-"A-w" = "yank_to_clipboard"
-"C-q" = ["yank_to_clipboard" , "delete_selection"]
+"A-w" = ":clipboard-yank"
+"C-w" = ["yank_to_clipboard" , "delete_selection"]
+
+"C-a" = "select_all"
 
 L = "goto_line_end"
 J = "goto_line_start"
@@ -82,9 +86,16 @@ k = "extend_visual_line_down"
 j = "extend_char_left"
 l = "extend_char_right"
 
+
+"]" = "goto_next_paragraph"
+"[" = "goto_prev_paragraph"
+
+
 [editor.inline-diagnostics]
 cursor-line = "warning"
 other-lines = "disable"
 
 [editor]
 auto-format = false
+
+
