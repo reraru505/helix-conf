@@ -31,10 +31,12 @@ J = "goto_line_start"
 
 #copy , move  and paste
 "C-y" = "paste_clipboard_before"
+"C-u" = "paste_clipboard_after"
+
 "A-w" = ":clipboard-yank"
 "C-w" = ["yank_to_clipboard" , "delete_selection"]
 
-"tab" = ":fmt"
+#"tab" = ":fmt"
 "ret" = "open_below"
 "C-s" = "search"
 
@@ -55,6 +57,7 @@ J = "goto_line_start"
 
 
 "C-y" = "paste_clipboard_before"
+"C-u" = "paste_clipboard_after"
 
                                                       
 "A-l" = "goto_line_end"
@@ -90,6 +93,10 @@ l = "extend_char_right"
 "]" = "goto_next_paragraph"
 "[" = "goto_prev_paragraph"
 
+#move selection
+"A-i" = ["extend_to_line_bounds" , "delete_selection" ,"move_line_up", "paste_before"]
+"A-k" = ["extend_to_line_bounds" , "delete_selection" , "paste_after"]
+
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
@@ -97,5 +104,3 @@ other-lines = "disable"
 
 [editor]
 auto-format = false
-
-

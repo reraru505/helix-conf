@@ -7,3 +7,13 @@ config = {}
 injection-regex = "python"
 file-types = ["py"]
 shebangs = ["python"]
+
+
+[[language]]
+name = "c"
+file-patterns = ["*.c", "*.h"]
+language-servers = ["clangd"]
+
+[language_server.clangd]
+command = "clangd"
+args = ["--config=clangd.yaml"]

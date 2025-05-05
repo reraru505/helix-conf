@@ -13,3 +13,4 @@ inherits= "naysayer"
 "ui.cursor" = {fg = "black" , bg = "#ffa000"}
 "ui.cursor.primary" = {fg = "black" , bg = "#ffa000"}
 "ui.cursor.match" = {fg = "black" , bg = "green"}
+"ui.highlight" = {fg = "black" , bg="red"}
