@@ -2,18 +2,21 @@
 name = "python"
 scope = "source.python"
 auto-format = false
-language-server = { command = "pylsp" }
-config = {}
+diagnostic-severity	= "error"
 injection-regex = "python"
 file-types = ["py"]
 shebangs = ["python"]
 
-
 [[language]]
 name = "c"
-file-patterns = ["*.c", "*.h"]
+file-types = ["*.c", "*.h"]
 language-servers = ["clangd"]
 
 [language_server.clangd]
 command = "clangd"
 args = ["--config=clangd.yaml"]
+
+[language-server.gopls]
+command = "gopls"
+args = ["serve"]
+

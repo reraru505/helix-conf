@@ -1,5 +1,5 @@
 
-inherits= "naysayer"
+inherits= "kanagawa"
 
 "diagnostic" = {fg = "black" , bg = "yellow"}
 
